@@ -1,0 +1,90 @@
+.about-us {
+	@extend .container;
+	 @media screen and (min-width: 768px) {
+		@include flexbox($jc: flex-start, $ai: center, $flw: nowrap);
+		padding-left: 39px;
+		padding-right: 39px;
+	}
+	 @media screen and (min-width: 1280px) {
+		justify-content: center;
+	}
+}
+.about-us__list {
+	display: none;
+	@extend .list;
+	@media screen and (min-width: 768px) {
+		display: block;
+		padding: 0;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-right: 30px;
+		width: calc((100% - 30px) / 2);
+	}
+	@media screen and (min-width: 1280px) {
+		@include flexbox($jc: center, $ai: stretch, $flw: nowrap);
+		margin-right: 64px;
+		width: auto;
+		min-width: 570px;
+	}
+}
+.about-us__item {
+	display: flex;
+    justify-content: center;
+	@media screen and (min-width: 768px) {
+       &:not(:last-child) {
+		margin-bottom: 30px;
+		}
+	}
+	@media screen and (min-width: 1280px) {
+		&:not(:last-child) {
+		margin-right: 30px;
+		margin-bottom: 0;
+		}
+	}
+}
+
+.about-us__box {
+	@media screen and (min-width: 768px) {
+	  width: calc((100% - 30px) / 2);
+	}
+	@media screen and (min-width: 1280px) {
+	  width: calc((100% - 64px) / 2);
+	}
+}
+.about-us__subtitle {
+	@extend .subtitle;
+	@extend .dark;
+}
+.about-us__title {
+	 @media screen and (max-width: 479px) {
+    @include fluidFontSize(24px, 28px, 320px, 479px, 24px);
+  }
+	@include font(700, 28px, 1.17);
+	color: $color-title-link;
+	margin-bottom: 20px;
+	@media screen and (min-width: 1280px) {
+	  @include font(700, 42px, 1.16);
+	}
+}
+.about-us__description {
+	@extend .description;
+}
+.about-us__text {
+	 @media screen and (max-width: 479px) {
+    @include fluidFontSize(12px, 14px, 320px, 479px, 12px);
+  }
+	@include font(400, 14px, 1.85);
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+.about-us__btn {
+	@extend .link;
+	@extend .btn;
+	@include font(600, 12px, 1.33);
+	color: $color-title-link;
+    display: inline-block;
+    &:hover,
+    &:focus {
+	    color: $color-text-dark-bcg;
+    }
+}

@@ -1,0 +1,89 @@
+.why-come {
+	@extend .container;
+	@media screen and (min-width: 1280px) {
+		@include flexbox($jc: flex-start, $ai: stretch, $flw: nowrap);
+		flex-direction: row-reverse;
+		padding-left: 155px;
+		padding-right: 155px;
+	}
+	
+}
+.why-come__list {
+	@extend .list;
+	@include flexbox;
+	flex-wrap: wrap;
+	@media screen and (min-width: 768px) {
+		max-width: 450px;
+		margin-left: auto;
+	}
+	@media screen and (min-width: 1280px) {
+		margin-right: 130px;
+	}
+}
+.why-come__item {
+	background-color: $color-bcg-gray;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 193px;
+	height: 133px;
+    &:nth-child(even) {
+		 @media screen and (max-width: 479px) {
+    margin-left: auto;
+  }
+	    margin-top: 30px;
+    }
+    &:nth-child(odd) {
+		 @media screen and (max-width: 479px) {
+	margin-top: 30px;
+	margin-right: auto;
+  }
+	    margin-right: 30px;
+	}
+	@media screen and (min-width: 768px) {
+		width: 210px;
+	}
+	@media screen and (min-width: 768px) {
+		width: 170px;
+	}
+}
+.why-come__number {
+	 @media screen and (max-width: 479px) {
+    @include fluidFontSize(36px, 42px, 320px, 479px, 36px);
+  }
+	@include font(700, 42px, 1.36);
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: $color-title-link;
+	margin-top: 0;
+	margin-bottom: 6px;
+}
+.why-come__text {
+	@include font(600, 11px, 1.36);
+	text-align: center;
+	color: $color-title-link;
+	margin: 0;
+}
+.why-come__box {
+	@media screen and (min-width: 768px) {
+		padding-right: 228px;
+	}
+	@media screen and (min-width: 1280px) {
+		padding: 0;
+	}
+}
+.why-come__title {
+	@extend .title;
+	color: $color-title-link;
+}
+.why-come__subtitle {
+	@extend .subtitle;
+	@extend .dark;
+}
+.why-come__description {
+	@extend .description;
+	 @media screen and (max-width: 479px) {
+    @include fluidFontSize(14px, 18px, 320px, 479px, 14px);
+  }
+	@include font(400, 18px, 1.67);
+	margin-bottom: 44px;
+}

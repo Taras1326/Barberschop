@@ -1,0 +1,301 @@
+.hero,
+.glide,
+.glide__slides {
+  @extend .dark-bcg;
+  height: 580px;
+  @media screen and (min-width: 768px) {
+    height: 680px;
+    width: calc(100% - 159px);
+  }
+}
+.glide__slides {
+  margin: 0;
+}
+.glide__slide {
+  background-color: $color-title-link;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 1100px) {
+    background-position: left bottom;
+  }
+}
+.glide__slide--1 {
+  background-image: url(../images/hero1-mobile.jpg);
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/hero1-mobile@2x.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/hero1-tablet.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/hero1-tablet@2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    background-image: url(../images/hero1-desktop.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/hero1-desktop@2x.jpg);
+    }
+  }
+}
+.glide__slide--2 {
+  background-image: url(../images/hero2-mobile.jpg);
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/hero2-mobile@2x.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/hero2-tablet.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/hero2-tablet@2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    background-image: url(../images/hero2-desktop.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/hero2-desktop@2x.jpg);
+    }
+  }
+}
+.glide__slide--3 {
+  background-image: url(../images/hero3-mobile.jpg);
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/hero3-mobile@2x.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/hero3-tablet.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/hero3-tablet@2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    background-image: url(../images/hero3-desktop.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/hero3-desktop@2x.jpg);
+    }
+  }
+}
+.glide__bullets {
+  display: none !important;
+  @media screen and (min-width: 768px) {
+    height: 60px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    cursor: pointer !important;
+    z-index: 4 !important;
+    left: 0 !important;
+    right: 40px;
+    top: 50%;
+    transform: translateX(0) !important;
+  }
+  @media screen and (min-width: 1100px) {
+    right: 55px;
+  }
+}
+.glide__bullet {
+  width: 8px !important;
+  height: 1px !important;
+  padding: 0;
+  border-radius: 0 !important;
+  border: 0 !important;
+  background-color: $color-title-dark !important;
+  margin: 6px !important;
+  padding: 1px !important;
+  &--active {
+    width: 18px !important;
+    background-color: $color-bcg-white !important;
+  }
+}
+div[data-glide-el='controls'] {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+  }
+  @media screen and (min-width: 1100px) {
+    right: 55px;
+  }
+}
+.glide__control {
+  cursor: pointer;
+  text-align: right;
+  font-weight: 600;
+  font-size: 11px;
+  width: 60px;
+  padding: 8px 0;
+  color: rgba(157, 164, 189, 0.6);
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.6);
+  &:first-child {
+    text-align: left;
+    margin-right: 26px;
+  }
+  &:focus,
+  &:hover {
+    color: $color-text-dark-bcg;
+    border-color: $color-text-dark-bcg;
+  }
+}
+.hero__content {
+  padding-top: 208px;
+  padding-left: 31px;
+  width: 320px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  @media screen and (min-width: 768px) {
+    padding-top: 272px;
+    padding-left: 120px;
+    width: 470px;
+  }
+  @media screen and (min-width: 1100px) {
+    padding-left: 100px;
+    width: 500px;
+  }
+}
+.hero__title {
+  @extend .title;
+
+  @media screen and (max-width: 479px) {
+    @include fluidFontSize(42px, 48px, 320px, 479px, 42px);
+  }
+  @include font(700, 48px, 1.16);
+  color: $color-text-dark-bcg;
+  @media screen and (min-width: 1280px) {
+    @include font(700, 72px, 1.18);
+  }
+}
+
+.smoke ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.smoke ul li {
+  list-style: none;
+  filter: blur(0.4px);
+  display: inline-block;
+  animation: smoke-back 1500ms linear forwards;
+}
+.smoke ul:hover li {
+  animation: smoke 4s linear forwards;
+}
+@keyframes smoke {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    filter: blur(1px);
+  }
+  33% {
+    transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    filter: blur(20px);
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    filter: blur(1px);
+  }
+}
+@keyframes smoke-back {
+  0% {
+    transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    filter: blur(20px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    filter: blur(1px);
+  }
+}
+
+.smoke ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+.smoke ul li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.smoke ul li:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.smoke ul li:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.smoke ul li:nth-child(5) {
+  animation-delay: 1.6s;
+}
+.smoke ul li:nth-child(6) {
+  animation-delay: 2s;
+}
+.smoke ul li:nth-child(7) {
+  animation-delay: 2.4s;
+}
+.smoke ul li:nth-child(8) {
+  animation-delay: 2.8s;
+}
+.smoke ul li:nth-child(9) {
+  animation-delay: 3.2s;
+}
+.smoke ul li:nth-child(10) {
+  animation-delay: 3.6s;
+}
+.hero__subtitle {
+  @extend .subtitle;
+  @extend .gray;
+}
+.hero__description {
+  @media screen and (max-width: 479px) {
+    @include fluidFontSize(12px, 16px, 320px, 479px, 14px);
+  }
+  @include font(400, 16px, 1.62);
+  color: $color-title-dark;
+  margin: 0;
+  @media screen and (min-width: 1280px) {
+    @include font(400, 18px, 1.67);
+  }
+}
